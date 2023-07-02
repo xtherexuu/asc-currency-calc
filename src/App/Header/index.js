@@ -14,8 +14,7 @@ import SrcMoonImage from "../../Utils/moon-logo.png";
 import useLocalStorage from "../useLocalStorage";
 import useCurrentDate from "./useCurrentDate";
 
-const Header = (isDarkModeOn, setDarkMode) => {
-  // const [isDarkModeOn, setDarkMode] = useLocalStorage("darkModeOn");
+const Header = ({isDarkModeOn, setDarkMode}) => {
 
   const onButtonClick = () => {
     setDarkMode((mode) => (mode = !mode));
