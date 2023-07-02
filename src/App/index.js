@@ -6,11 +6,11 @@ import lightTheme from "../Utils/themes/lightTheme";
 import useLocalStorage from "./useLocalStorage";
 
 function App() {
-  const [xyz, setXyz] = useLocalStorage("darkModeOn")
+  const [isDarkModeOn, setDarkMode] = useLocalStorage("darkModeOn");
 
   return (
-    <ThemeProvider theme={xyz ? darkTheme : lightTheme}>
-      <Header xyz={xyz} setXyz={setXyz}/>
+    <ThemeProvider theme={isDarkModeOn ? darkTheme : lightTheme}>
+      <Header isDarkModeOn={isDarkModeOn} setDarkMode={setDarkMode}/>
     </ThemeProvider>
   );
 }

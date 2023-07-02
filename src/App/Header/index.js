@@ -14,11 +14,11 @@ import SrcMoonImage from "../../Utils/moon-logo.png";
 import useLocalStorage from "../useLocalStorage";
 import useCurrentDate from "./useCurrentDate";
 
-const Header = (xyz, setXyz) => {
+const Header = (isDarkModeOn, setDarkMode) => {
   // const [isDarkModeOn, setDarkMode] = useLocalStorage("darkModeOn");
 
   const onButtonClick = () => {
-    setXyz((mode) => (mode = !mode));
+    setDarkMode((mode) => (mode = !mode));
   };
 
   const date = useCurrentDate();
@@ -32,8 +32,8 @@ const Header = (xyz, setXyz) => {
       <Container>
         <Date>{date}</Date>
         <Button onClick={onButtonClick}>
-          <ButtonImage isclicked={xyz} src={SrcSoonImage} />
-          <ButtonImage isclicked={xyz} src={SrcMoonImage} />
+          <ButtonImage isclicked={isDarkModeOn} src={SrcSoonImage} />
+          <ButtonImage isclicked={isDarkModeOn} src={SrcMoonImage} />
         </Button>
       </Container>
     </Wrapper>
