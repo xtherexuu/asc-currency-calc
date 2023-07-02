@@ -1,7 +1,7 @@
 const lightTheme = {
     colors: {
-        backgroundMain: "white",
-        main: "fccd2a",
+        backgroundMainColor: "white",
+        mainColor: "fccd2a",
         fontColor: "black",
     },
 }

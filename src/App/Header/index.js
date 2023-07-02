@@ -7,6 +7,7 @@ import {
   Button,
   TitleImage,
   ButtonImage,
+  Span,
 } from "./styled";
 import SrcTitleImage from "../../Utils/icon512.png";
 import SrcSoonImage from "../../Utils/sun-logo.png";
@@ -14,11 +15,12 @@ import SrcMoonImage from "../../Utils/moon-logo.png";
 import useLocalStorage from "../useLocalStorage";
 import useCurrentDate from "./useCurrentDate";
 
-const Header = ({isDarkModeOn, setDarkMode}) => {
-
+const Header = ({ isDarkModeOn, setDarkMode }) => {
   const onButtonClick = () => {
     setDarkMode((mode) => (mode = !mode));
   };
+
+  
 
   const date = useCurrentDate();
 
@@ -26,7 +28,7 @@ const Header = ({isDarkModeOn, setDarkMode}) => {
     <Wrapper>
       <Container>
         <TitleImage src={SrcTitleImage} />
-        <Title>Currency Calculator</Title>
+        <Title>Currency <Span>Calculator</Span></Title>
       </Container>
       <Container>
         <Date>{date}</Date>

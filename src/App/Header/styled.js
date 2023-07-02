@@ -17,7 +17,13 @@ export const Title = styled.h1`
   font-size: 3rem;
   padding: 0;
   margin: 0 20px;
-  color: ${({theme}) => theme.colors.fontColor};
+  color: ${({ theme }) => theme.colors.fontColor};
+  transition: color 0.5s;
+`;
+
+export const Span = styled.span`
+  font-family: "Grinched Regular", sans-serif;
+  color: #fccd2a;
 `;
 
 export const TitleImage = styled.img`
@@ -27,6 +33,8 @@ export const TitleImage = styled.img`
 export const Date = styled.p`
   font-size: 1.25rem;
   margin-right: 20px;
+  color: ${({ theme }) => theme.colors.fontColor};
+  transition: color 0.5s;
 `;
 
 export const Button = styled.button`
