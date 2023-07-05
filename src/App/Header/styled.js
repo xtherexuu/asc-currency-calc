@@ -4,12 +4,25 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   margin: 10px 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    margin: 10px 0px 10px 10px;
+  }
+
+  ${({ data }) =>
+    data &&
+    css`
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        display: none;
+      }
+    `}
 `;
 
 export const Title = styled.h1`
@@ -19,6 +32,15 @@ export const Title = styled.h1`
   margin: 0 20px;
   color: ${({ theme }) => theme.colors.fontColor};
   transition: color 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 2rem;
+    margin: 0 10px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc}px) {
+    font-size: 4.5rem;
+  }
 `;
 
 export const Span = styled.span`
@@ -28,6 +50,14 @@ export const Span = styled.span`
 
 export const TitleImage = styled.img`
   width: 85px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    width: 50px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc}px) {
+    width: 120px;
+  }
 `;
 
 export const Date = styled.p`
@@ -35,6 +65,14 @@ export const Date = styled.p`
   margin-right: 20px;
   color: ${({ theme }) => theme.colors.fontColor};
   transition: color 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc}px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -47,6 +85,19 @@ export const Button = styled.button`
   justify-content: flex-start;
   overflow: hidden;
   border: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    justify-content: center;
+  }
+
+  ${({ hamburgermenu }) =>
+    hamburgermenu &&
+    css`
+      margin-right: 10px;
+      @media (min-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        display: none;
+      }
+    `}
 `;
 
 export const ButtonImage = styled.img`
@@ -58,5 +109,29 @@ export const ButtonImage = styled.img`
     isclicked &&
     css`
       transform: translateY(-42px);
+    `}
+`;
+
+export const MenuLine = styled.div`
+  width: 35px;
+  height: 4px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  background-color: #${({ theme }) => theme.colors.mainColor};
+
+  ${({ isclicked }) =>
+    isclicked &&
+    css`
+      ${({ topline }) =>
+        topline &&
+        css`
+          transform: translate(5px, 6.5px) rotate(-45deg);
+        `}
+      ${({ bottomline }) =>
+        bottomline &&
+        css`
+          transform: translate(5px, -6.5px) rotate(45deg);
+        `}
     `}
 `;

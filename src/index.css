@@ -5,6 +5,7 @@
 
 html, ::after, ::before {
   box-sizing: inherit;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -12,4 +13,9 @@ html, ::after, ::before {
   font-style: normal;
   font-weight: normal;
   src: local('Grinched Regular'), url('Utils/GrinchedRegular.woff') format('woff');
+}
+
+.darkTheme {
+  background-color: #1a1a1a;
+  transition: background-color 0.25s;
 }
