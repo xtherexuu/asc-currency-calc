@@ -1,6 +1,6 @@
 const darkTheme = {
   colors: {
-    backgroundMainColor: "#1a1a1a;",
+    backgroundMainColor: "#1a1a1a",
     mainColor: "fccd2a",
     fontColor: "white",
   },

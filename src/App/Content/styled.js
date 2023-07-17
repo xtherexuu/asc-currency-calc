@@ -88,6 +88,8 @@ export const FromAmount = styled.span`
   ${({ islabel }) =>
     islabel &&
     css`
+      color: ${({ theme }) => theme.colors.fontColor};
+      transition: color 0.5;
       @media (min-width: ${({ theme }) => theme.breakpoints.largepc}px) {
         font-size: 1.75rem;
       }
