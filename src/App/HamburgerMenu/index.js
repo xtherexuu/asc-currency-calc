@@ -6,6 +6,18 @@ import useCurrentDate from "../useCurrentDate";
 const HamburgerMenu = ({ isDarkModeOn, setDarkMode, isButtonClicked }) => {
   const date = useCurrentDate();
 
+  const getFormatedDate = () => {
+    const dateString = date.toLocaleDateString("pl-PL", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+
+    const timeString = date.toLocaleTimeString("pl-PL");
+
+    return dateString + " " + timeString;
+  };
+
   const onButtonClick = () => {
     setDarkMode((mode) => (mode = !mode));
   };
@@ -19,7 +31,7 @@ const HamburgerMenu = ({ isDarkModeOn, setDarkMode, isButtonClicked }) => {
           <ButtonImage isclicked={isDarkModeOn} src={SrcMoonImage} />
         </Button>
       </Paragraph>
-      <Date>Aktualna&nbsp;Data: {date}</Date>
+      <Date>Aktualna&nbsp;Data: {getFormatedDate()}</Date>
     </Wrapper>
   );
 };

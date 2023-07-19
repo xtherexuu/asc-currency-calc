@@ -12,19 +12,9 @@ const useCurrentDate = () => {
     };
   }, []);
 
-  const getFormatedDate = () => {
-    const dateString = date.toLocaleDateString("pl-PL", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    });
+  
 
-    const timeString = date.toLocaleTimeString("pl-PL");
-
-    return dateString + " " + timeString;
-  };
-
-  return getFormatedDate();
+  return date;
 };
 
 export default useCurrentDate;
