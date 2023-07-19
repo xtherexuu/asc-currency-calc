@@ -1,6 +1,15 @@
 import { createGlobalStyle } from "styled-components";
+import fontPath from "../Utils/GrinchedRegular.woff";
 
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+      font-family: "Grinched Regular";
+      font-style: normal;
+      font-weight: normal;
+      src: local("Grinched Regular"),
+        url(${fontPath}) format("woff");
+    }
+
     * {
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
