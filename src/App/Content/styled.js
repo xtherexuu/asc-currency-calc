@@ -117,18 +117,18 @@ export const ToCurrency = styled(ToAmount)`
 export const Cantor = styled.div`
   display: grid;
   grid-template-areas:
-    "s1 s2"
-    "i i"
-    "b b";
+    "select1 select2"
+    "input input"
+    "butto b";
   grid-gap: 10px;
   margin: 40px 20px 0 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     grid-template-areas:
-      "s1"
-      "s2"
-      "i"
-      "b";
+      "select1"
+      "select2"
+      "input"
+      "button";
   }
 `;
 export const Select = styled.select`

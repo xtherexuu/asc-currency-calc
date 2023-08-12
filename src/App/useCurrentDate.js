@@ -12,8 +12,6 @@ const useCurrentDate = () => {
     };
   }, []);
 
-  
-
   return date;
 };
 
