@@ -1,57 +1,43 @@
-import React from "react";
 import {
-  Wrapper,
-  Title,
-  Container,
-  Date,
-  Button,
-  TitleImage,
-  ButtonImage,
-  Span,
-  MenuLine,
+  HeaderContainer,
+  HeaderHeading,
+  HeaderImage,
+  HeaderMenuContainer,
+  NavElement,
+  HamburgerMenuIconItem,
 } from "./styled";
-import SrcTitleImage from "../../Utils/icon512.png";
-import SrcSoonImage from "../../Utils/sun-logo.png";
-import SrcMoonImage from "../../Utils/moon-logo.png";
-import useCurrentDate from "../useCurrentDate";
+import HeaderImageSrc from "../../Utils/logo.png";
 
-const Header = ({
-  isDarkModeOn,
-  setDarkMode,
-  isButtonClicked,
-  setButtonStatus,
-}) => {
-  const onButtonClick = () => {
-    setDarkMode((mode) => (mode = !mode));
-  };
-
-  const date = useCurrentDate();
-
+const Header = ({ isMenuButtonClicked, setMenuButtonStatus }) => {
   return (
-    <Wrapper>
-      <Container>
-        <TitleImage src={SrcTitleImage} />
-        <Title>
-          Currency <Span>Calculator</Span>
-        </Title>
-      </Container>
-      <Container data>
-        <Date>{date}</Date>
-        <Button onClick={onButtonClick}>
-          <ButtonImage isclicked={isDarkModeOn} src={SrcSoonImage} />
-          <ButtonImage isclicked={isDarkModeOn} src={SrcMoonImage} />
-        </Button>
-      </Container>
-      <Button
+    <HeaderContainer>
+      <HeaderImage src={HeaderImageSrc} alt="this is a logo of the website" />
+      <HeaderHeading>Galaxy Converter</HeaderHeading>
+      <HeaderMenuContainer normalmenu>
+        <NavElement>Home</NavElement>
+        <NavElement>Calculator</NavElement>
+      </HeaderMenuContainer>
+      <HeaderMenuContainer
+        as="button"
         hamburgermenu
         onClick={() => {
-          setButtonStatus((status) => (status = !status));
+          setMenuButtonStatus((status) => (status = !status));
         }}
       >
-        <MenuLine isclicked={isButtonClicked} topline></MenuLine>
-        <MenuLine isclicked={isButtonClicked} bottomline></MenuLine>
-      </Button>
-    </Wrapper>
+        <HamburgerMenuIconItem
+          topitem
+          isMenuButtonClicked={isMenuButtonClicked}
+        />
+        <HamburgerMenuIconItem
+          middleitem
+          isMenuButtonClicked={isMenuButtonClicked}
+        />
+        <HamburgerMenuIconItem
+          bottomitem
+          isMenuButtonClicked={isMenuButtonClicked}
+        />
+      </HeaderMenuContainer>
+    </HeaderContainer>
   );
 };
 
