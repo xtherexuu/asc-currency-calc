@@ -7,8 +7,7 @@ export const HeaderContainer = styled.header`
   z-index: 100;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
     grid-template-columns: 50px 1fr 30px;
     padding: 5px 10px;
     grid-gap: 5px;
