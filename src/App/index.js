@@ -1,32 +1,22 @@
-import React, { useState } from "react";
-import Header from "./Header";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import darkTheme from "../Utils/themes/darkTheme";
-import lightTheme from "../Utils/themes/lightTheme";
-import useLocalStorage from "./useLocalStorage";
-import Content from "./Content";
-import HamburgerMenu from "./HamburgerMenu";
+import theme from "../Utils/themes/theme";
 import { GlobalStyle } from "./globalstyle";
+import Header from "./Header";
 
 function App() {
-  const [isDarkModeOn, setDarkMode] = useLocalStorage("darkModeOn");
-  const [isButtonClicked, setButtonStatus] = useState(false);
+  const [isMenuButtonClicked, setMenuButtonStatus] = useState(false);
+  useEffect(() => {
+    console.log(isMenuButtonClicked)
+  }, [isMenuButtonClicked])
 
   return (
-    <ThemeProvider theme={isDarkModeOn ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle isDarkModeOn />
       <Header
-        isButtonClicked={isButtonClicked}
-        setButtonStatus={setButtonStatus}
-        isDarkModeOn={isDarkModeOn}
-        setDarkMode={setDarkMode}
+        isMenuButtonClicked={isMenuButtonClicked}
+        setMenuButtonStatus={setMenuButtonStatus}
       />
-      <HamburgerMenu
-        isDarkModeOn={isDarkModeOn}
-        setDarkMode={setDarkMode}
-        isButtonClicked={isButtonClicked}
-      />
-      <Content isDarkModeOn={isDarkModeOn}></Content>
     </ThemeProvider>
   );
 }
