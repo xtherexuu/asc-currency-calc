@@ -3,6 +3,9 @@ import { ThemeProvider } from "styled-components";
 import theme from "../Utils/themes/theme";
 import { GlobalStyle } from "./globalstyle";
 import Header from "./Header";
+import { SectionsWrapper } from "./styled";
+import CalculatorSection from "./CalculatorSection";
+import LandingPageSection from "./LandingPageSection";
 
 function App() {
   const [isMenuButtonClicked, setMenuButtonStatus] = useState(false);
@@ -17,6 +20,10 @@ function App() {
         isMenuButtonClicked={isMenuButtonClicked}
         setMenuButtonStatus={setMenuButtonStatus}
       />
+      <SectionsWrapper>
+        <LandingPageSection />
+        <CalculatorSection />
+      </SectionsWrapper>
     </ThemeProvider>
   );
 }
