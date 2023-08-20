@@ -95,6 +95,7 @@ export const HamburgerMenuIconItem = styled.div`
 export const NavElement = styled.a`
   color: white;
   text-decoration: none;
+  cursor: pointer;
   @media (width > ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
     font-size: 1.25rem;
   }
