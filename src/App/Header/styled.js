@@ -8,22 +8,25 @@ export const HeaderContainer = styled.header`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
   @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
-    grid-template-columns: 50px 1fr 30px;
+    grid-template-columns: 40px 1fr 30px;
     padding: 5px 10px;
     grid-gap: 5px;
     text-align: center;
     font-size: 1.25rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
-    grid-template-columns: 60px 1fr 40px;
-    font-size: 1.65rem;
+    grid-template-columns: 50px 1fr 40px;
+    font-size: 1.55rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
-    grid-template-columns: 70px 1fr auto;
+    grid-template-columns: 50px 1fr auto;
     padding: 5px 20px;
     text-align: left;
     grid-gap: 20px;
-    font-size: 1.75rem;
+    font-size: 1.45rem;
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
+    font-size: 2rem;
   }
 `;
 
