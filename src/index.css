@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "Grinched Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Grinched Regular"),
-    url("Utils/GrinchedRegular.woff") format("woff");
+x {
+color: #370c88;
+
 }
