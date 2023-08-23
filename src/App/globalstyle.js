@@ -20,7 +20,23 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-      background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
       overflow-x: hidden;
+      background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
+    }
+
+    #tsparticles {
+      height: 100%;
+      width: 100%;
+    }
+
+    @keyframes rocketAnimation {
+      0% {
+        /* transform: translate(0, 0); */
+      }
+      100% {
+        /* transform: translate(50vh, -140vw); */
+        bottom: 85%;
+        right: 120%;
+      }
     }
 `;
