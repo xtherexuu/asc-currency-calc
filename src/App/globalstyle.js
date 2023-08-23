@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import fontPath from "../Utils/GrinchedRegular.woff";
 import eina01font from "../Utils/Eina01.woff";
 
 export const GlobalStyle = createGlobalStyle`
