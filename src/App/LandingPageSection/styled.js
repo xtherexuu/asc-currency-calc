@@ -57,18 +57,33 @@ export const Heading = styled.h2`
   margin: 0 0 15px 0;
   padding: 0;
   text-shadow: 0 0 5px black;
+  @media (min-width: ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
+    font-size: 1.65rem;
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
+    font-size: 1.85rem;
+  }
 `;
 
-export const HeadingComplement = styled.p`
-  margin: 0;
+export const Text = styled.p`
+  margin: 0 0 15px 0;
   text-shadow: 0 0 5px black;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+  @media (min-width: ${({theme}) => theme.breakpoints.tablet.breakpoint}) {
+    font-size: 1.10rem;
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
+    font-size: 1.25rem;
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
+    font-size: 1.45rem;
+  }
 `;
 
 export const ImageLogo = styled.img`
   width: 100%;
   @media (width > ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
-    max-width: 315px;
+    max-width: 275px;
   }
 `;
 
