@@ -16,6 +16,7 @@ const ParticlesBackground = () => {
   return (
     <Wrapper>
       <Particles
+        style={{zIndex: -3, position: "absolute"}}
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -67,7 +68,7 @@ const ParticlesBackground = () => {
                 default: "out",
               },
               random: false,
-              speed: 3,
+              speed: 2.5,
               straight: false,
             },
             number: {
@@ -78,7 +79,7 @@ const ParticlesBackground = () => {
               value: 120,
             },
             opacity: {
-              value: 0.8,
+              value: 0.7,
             },
             shape: {
               type: "circle",
