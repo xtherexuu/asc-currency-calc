@@ -1,18 +1,18 @@
-@media (width > ${({theme}) => theme.breakpoints.smallmobile.breakpoint}) {
+@media (min-width: ${({theme}) => theme.breakpoints.smallmobile.breakpoint}) {
 
     }
-    @media (width > ${({theme}) => theme.breakpoints.mobile.breakpoint}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.mobile.breakpoint}) {
         
     }
-    @media (width > ${({theme}) => theme.breakpoints.tablet.breakpoint}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.tablet.breakpoint}) {
         
     }
-    @media (width > ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
         
     }
-    @media (width > ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
         
     }
-    @media (width > ${({theme}) => theme.breakpoints.largepc.breakpoint}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.largepc.breakpoint}) {
         
     }

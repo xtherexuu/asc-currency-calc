@@ -4,6 +4,7 @@ export const FormElement = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 0.9rem;
 `;
 
 export const Input = styled.input`
@@ -27,7 +28,6 @@ export const Input = styled.input`
     font-weight: bold;
     text-align: center;
   }
-  
 `;
 
 export const Select = styled(Input)`

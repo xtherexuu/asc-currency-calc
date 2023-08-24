@@ -4,14 +4,20 @@ export const Wrapper = styled.section`
   overflow: hidden;
   position: relative;
   width: 100%;
-  @media (width > ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+    min-height: calc(100vh - 50px);
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     min-height: calc(100vh - 60px);
   }
-  @media (width > ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
     min-height: calc(100vh - 70px);
   }
-  @media (width > ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
-    min-height: calc(100vh - 80px);
+  @media (min-width: ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
+    min-height: calc(100vh - 90px);
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.ultrahd.breakpoint}) {
+    min-height: calc(100vh - 110px);
   }
 `;
 
@@ -26,15 +32,7 @@ export const TextSection = styled.div`
 export const SectionHeading = styled.h2`
   margin: 0;
   justify-self: center;
-  @media (width > ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
-    font-size: 1.65rem;
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
-    font-size: 1.75rem;
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.mediumpc.breakpoint}) {
-    font-size: 1.85rem;
-  }
+  font-size: 1.2rem;
 `;
 
 export const CalculatorWrapper = styled.div`
@@ -54,22 +52,22 @@ export const SpaceIcon = styled.img`
   position: absolute;
   z-index: -2;
   user-select: none;
-  @media (width > ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
     width: 15%;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     width: 10%;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
     width: 8.5%;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
     width: 7%;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.mediumpc.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mediumpc.breakpoint}) {
     width: 5%;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
     width: 4%;
   }
   ${({ alonerocket1 }) =>

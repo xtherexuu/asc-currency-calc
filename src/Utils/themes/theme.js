@@ -9,27 +9,30 @@ const theme = {
     breakpoints: {
         smallmobile: {
             breakpoint: "0px",
-            fontsize: "1rem",
         }, 
         mobile: {
             breakpoint: "425px",
-            fontsize: "1rem",
         },
         tablet: {
             breakpoint: "768px",
-            fontsize: "1rem",
         },
         smallpc: {
             breakpoint: "1024px",
-            fontsize: "1rem",
         },
         mediumpc: {
             breakpoint: "1366px",
-            fontsize: "1rem",
         },
         largepc: {
             breakpoint: "1680px",
-            fontsize: "1rem",
+        },
+        fullhd: {
+            breakpoint: "1919px",
+        },
+        quadhd: {
+            breakpoint: "2559px",
+        },
+        ultrahd: {
+            breakpoint: "3839px",
         }
     }
 }

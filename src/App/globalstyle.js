@@ -24,6 +24,33 @@ export const GlobalStyle = createGlobalStyle`
       background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
     }
 
+    :root {
+      @media (min-width: ${({theme}) => theme.breakpoints.smallmobile.breakpoint}) {
+        font-size: 1em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.mobile.breakpoint}) {
+          font-size: 1.1em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.tablet.breakpoint}) {
+          font-size: 1.2em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
+          font-size: 1.3em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.largepc.breakpoint}) {
+          font-size: 1.4em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
+          font-size: 1.6em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.quadhd.breakpoint}) {
+          font-size: 2.3em;
+      }
+      @media (min-width: ${({theme}) => theme.breakpoints.ultrahd.breakpoint}) {
+          font-size: 3em;
+      }
+    }
+
     #tsparticles {
       height: 100%;
       width: 100%;

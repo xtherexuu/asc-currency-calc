@@ -10,79 +10,62 @@ export const Wrapper = styled.section`
   background-repeat: no-repeat;
   display: grid;
   padding: 30px;
-  @media (width > ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
-    min-height: calc(100vh - 60px);
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+    min-height: calc(100vh - 50px);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
     align-content: center;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
-    min-height: calc(100vh - 70px);
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
+    min-height: calc(100vh - 60px);
 
     justify-content: center;
     justify-items: center;
     grid-template-columns: 75%;
   }
-  @media (width > ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
-    min-height: calc(100vh - 80px);
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
+    min-height: calc(100vh - 70px)
   }
-  @media (width > ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
+  @media (width > ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
+    min-height: calc(100vh - 90px);
   }
-  @media (width > ${({ theme }) => theme.breakpoints.mediumpc.breakpoint}) {
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
+  @media (width > ${({ theme }) => theme.breakpoints.ultrahd.breakpoint}) {
+    min-height: calc(100vh - 110px);
   }
 `;
 
 export const TextContainer = styled.article`
   color: white;
-  @media (width > ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
   }
-  @media (width > ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     text-align: center;
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.mediumpc.breakpoint}) {
-  }
-  @media (width > ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
   }
 `;
 
 export const Heading = styled.h2`
   font-weight: bold;
-  /* text-align: center; */
   margin: 0 0 15px 0;
   padding: 0;
   text-shadow: 0 0 5px black;
-  @media (min-width: ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
-    font-size: 1.65rem;
-  }
-  @media (min-width: ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
-    font-size: 1.85rem;
+  font-size: 1.2rem;
+  @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
+    margin-bottom: 30px;
   }
 `;
 
 export const Text = styled.p`
   margin: 0 0 15px 0;
   text-shadow: 0 0 5px black;
-  font-size: 1.05rem;
-  @media (min-width: ${({theme}) => theme.breakpoints.tablet.breakpoint}) {
-    font-size: 1.10rem;
-  }
-  @media (min-width: ${({theme}) => theme.breakpoints.smallpc.breakpoint}) {
-    font-size: 1.25rem;
-  }
-  @media (min-width: ${({theme}) => theme.breakpoints.mediumpc.breakpoint}) {
-    font-size: 1.45rem;
+  font-size: 1rem;
+  @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
+    margin-bottom: 30px;
   }
 `;
 
 export const ImageLogo = styled.img`
   width: 100%;
-  @media (width > ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     max-width: 275px;
   }
 `;
@@ -102,6 +85,21 @@ export const ScrollButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
+    width: 50px;
+    height: 31.5px;
+    bottom: 8px;
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.quadhd.breakpoint}) {
+    width: 60px;
+    height: 37.5px;
+    bottom: 10px;
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.ultrahd.breakpoint}) {
+    width: 80px;
+    height: 50px;
+    bottom: 20px;
+  }
 `;
 
 export const ScrollIcon = styled.img`
