@@ -32,7 +32,7 @@ const LandingPageSection = () => {
     return formatedTime;
   }
   return (
-    <Wrapper>
+    <Wrapper id="landingpageSection">
       <ImageLogo src={srcToLogoImage} alt="that's a website logo" />
       <TextContainer>
         <Heading>Witaj&nbsp;w Galaxy&nbsp;Converter&nbsp;!</Heading>
@@ -44,11 +44,12 @@ const LandingPageSection = () => {
         </Text>
         <Text>Dziś jest {getFormatedDate()}r.&nbsp;{getFormatedTime()}</Text>
       </TextContainer>
-      <ScrollButton>
+      <ScrollButton href="#calculatorSection">
         <ScrollIcon
           src={srcToScrollIcon}
           alt="Its a icon for button which is scrolling to the calculator section"
         />
+        <Text>Scroll</Text>
       </ScrollButton>
     </Wrapper>
   );

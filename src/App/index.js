@@ -6,12 +6,13 @@ import Header from "./Header";
 import { SectionsWrapper } from "./styled";
 import CalculatorSection from "./CalculatorSection";
 import LandingPageSection from "./LandingPageSection";
+import HamburgerMenu from "./HamburgerMenu";
 
 function App() {
   const [isMenuButtonClicked, setMenuButtonStatus] = useState(false);
   useEffect(() => {
-    console.log(isMenuButtonClicked)
-  }, [isMenuButtonClicked])
+    console.log(isMenuButtonClicked);
+  }, [isMenuButtonClicked]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -21,8 +22,9 @@ function App() {
         setMenuButtonStatus={setMenuButtonStatus}
       />
       <SectionsWrapper>
-        <LandingPageSection />
-        <CalculatorSection />
+        <HamburgerMenu isMenuButtonClicked={isMenuButtonClicked} />
+        <LandingPageSection  />
+        <CalculatorSection  />
       </SectionsWrapper>
     </ThemeProvider>
   );

@@ -10,7 +10,8 @@ export const Wrapper = styled.section`
   background-repeat: no-repeat;
   display: grid;
   padding: 30px;
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.smallmobile.breakpoint}) {
     min-height: calc(100vh - 50px);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
@@ -24,7 +25,7 @@ export const Wrapper = styled.section`
     grid-template-columns: 75%;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
-    min-height: calc(100vh - 70px)
+    min-height: calc(100vh - 70px);
   }
   @media (width > ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
     min-height: calc(100vh - 90px);
@@ -36,7 +37,8 @@ export const Wrapper = styled.section`
 
 export const TextContainer = styled.article`
   color: white;
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.smallmobile.breakpoint}) {
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     text-align: center;
@@ -49,7 +51,7 @@ export const Heading = styled.h2`
   padding: 0;
   text-shadow: 0 0 5px black;
   font-size: 1.2rem;
-  @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.fullhd.breakpoint}) {
     margin-bottom: 30px;
   }
 `;
@@ -58,7 +60,7 @@ export const Text = styled.p`
   margin: 0 0 15px 0;
   text-shadow: 0 0 5px black;
   font-size: 1rem;
-  @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.fullhd.breakpoint}) {
     margin-bottom: 30px;
   }
 `;
@@ -70,10 +72,9 @@ export const ImageLogo = styled.img`
   }
 `;
 
-
-export const ScrollButton = styled.button`
-  width: 40px;
-  height: 25px;
+export const ScrollButton = styled.a`
+  width: 30px;
+  height: 19px;
   background-color: transparent;
   position: absolute;
   border: none;
@@ -84,18 +85,25 @@ export const ScrollButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  & > * {
+    font-size: 0.8rem;
+  }
   cursor: pointer;
-  @media (min-width: ${({theme}) => theme.breakpoints.fullhd.breakpoint}) {
-    width: 50px;
-    height: 31.5px;
+  @media (min-width: ${({ theme }) => theme.breakpoints.fullhd.breakpoint}) {
+    width: 40px;
+    height: 25px;
     bottom: 8px;
   }
-  @media (min-width: ${({theme}) => theme.breakpoints.quadhd.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
     width: 60px;
     height: 37.5px;
     bottom: 10px;
   }
-  @media (min-width: ${({theme}) => theme.breakpoints.ultrahd.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.ultrahd.breakpoint}) {
     width: 80px;
     height: 50px;
     bottom: 20px;
@@ -103,6 +111,9 @@ export const ScrollButton = styled.button`
 `;
 
 export const ScrollIcon = styled.img`
+  animation-name: scrollbuttonanimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
   color: white;
   width: 100%;
   height: 100%;

@@ -14,8 +14,8 @@ const Header = ({ isMenuButtonClicked, setMenuButtonStatus }) => {
       <HeaderImage src={HeaderImageSrc} alt="this is a logo of the website" />
       <HeaderHeading>Galaxy Converter</HeaderHeading>
       <HeaderMenuContainer normalmenu>
-        <NavElement>Home</NavElement>
-        <NavElement>Calculator</NavElement>
+        <NavElement href="#landingpageSection">Home</NavElement>
+        <NavElement href="#calculatorSection">Calculator</NavElement>
       </HeaderMenuContainer>
       <HeaderMenuContainer
         as="button"
