@@ -4,8 +4,10 @@ import {
   TextSection,
   SectionHeading,
   CalculatorWrapper,
+  CalculatorContainer,
 } from "./styled";
 import Form from "../Form";
+import Result from "../Result";
 import ParticlesBackground from "../ParticlesBackground";
 import alonerocket1imgsrc from "../../Utils/spaceicons/alonerocket1.png";
 import alonerocket2imgsrc from "../../Utils/spaceicons/alonerocket2.png";
@@ -23,19 +25,22 @@ const CalculatorSection = () => {
   const [toSelectValue, setToSelectValue] = useState("EUR");
 
   return (
-    <Wrapper>
+    <Wrapper id="calculatorSection">
       <CalculatorWrapper>
-        <TextSection>
-          <SectionHeading>Converter</SectionHeading>
-        </TextSection>
-        <Form
-          inputValue={inputValue}
-          setInputValue={setInputValue}
-          fromSelectValue={fromSelectValue}
-          setFromSelectValue={setFromSelectValue}
-          toSelectValue={toSelectValue}
-          setToSelectValue={setToSelectValue}
-        />
+        <CalculatorContainer>
+          <TextSection>
+            <SectionHeading>Converter</SectionHeading>
+          </TextSection>
+          <Form
+            inputValue={inputValue}
+            setInputValue={setInputValue}
+            fromSelectValue={fromSelectValue}
+            setFromSelectValue={setFromSelectValue}
+            toSelectValue={toSelectValue}
+            setToSelectValue={setToSelectValue}
+          />
+          <Result />
+        </CalculatorContainer>
       </CalculatorWrapper>
 
       <ParticlesBackground />

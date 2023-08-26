@@ -3,8 +3,9 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.section`
   overflow: hidden;
   position: relative;
-  width: 100%;
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  min-width: 100%;
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.smallmobile.breakpoint}) {
     min-height: calc(100vh - 50px);
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
@@ -27,6 +28,7 @@ export const TextSection = styled.div`
   grid-row-gap: 5px;
   padding: 5px;
   color: white;
+  grid-area: title;
 `;
 
 export const SectionHeading = styled.h2`
@@ -36,23 +38,49 @@ export const SectionHeading = styled.h2`
 `;
 
 export const CalculatorWrapper = styled.div`
+  display: flex;
+  min-height: 100%;
+  min-width: 100%;
+  justify-content: center;
+  @media (orientation: landscape) and (min-width: ${({ theme }) =>
+      theme.breakpoints.smallpc.breakpoint}) {
+    align-items: center;
+  }
+`;
+
+export const CalculatorContainer = styled.div`
   display: grid;
+  grid-template-areas: "title" "form" "result";
+  grid-template-rows: auto auto 1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
   grid-row-gap: 20px;
+  @media (orientation: landscape) and (min-width: ${({ theme }) =>
+      theme.breakpoints.smallpc.breakpoint}) {
+    grid-template-areas: "title title" "result form";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    justify-content: center;
+    align-items: center;
+  }
   width: 90%;
-  height: 50vh;
+  padding: 20px 0;
   border-radius: 20px;
   margin: 20px auto;
-  background-color: #ffffff07;
+  background-color: #ffffff08;
   backdrop-filter: blur(4px);
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const SpaceIcon = styled.img`
   position: absolute;
   z-index: -2;
   user-select: none;
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.smallmobile.breakpoint}) {
     width: 15%;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
