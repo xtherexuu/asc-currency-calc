@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
+  overflow-x: hidden;
   position: sticky;
   top: 0;
   display: grid;
@@ -8,7 +9,8 @@ export const HeaderContainer = styled.header`
   align-items: center;
   font-size: 1.25rem;
   background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.smallmobile.breakpoint}) {
     grid-template-columns: 40px 1fr 30px;
     padding: 5px 10px;
     grid-gap: 5px;
