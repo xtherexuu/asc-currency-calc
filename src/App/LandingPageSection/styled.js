@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   @media (min-width: ${({ theme }) =>
       theme.breakpoints.smallmobile.breakpoint}) {
     min-height: calc(100vh - 50px);
