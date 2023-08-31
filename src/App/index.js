@@ -7,25 +7,38 @@ import { SectionsWrapper } from "./styled";
 import CalculatorSection from "./CalculatorSection";
 import LandingPageSection from "./LandingPageSection";
 import HamburgerMenu from "./HamburgerMenu";
+import useCurrencies from "./useCurrencies";
+import LoadingSection from "./LoadingSection";
 
 function App() {
   const [isMenuButtonClicked, setMenuButtonStatus] = useState(false);
+  const [isLoaded, setLoaded] = useState(false);
+
+  const [currenciesObj, isError, isDone] = useCurrencies();
+
   useEffect(() => {
-    console.log(isMenuButtonClicked);
-  }, [isMenuButtonClicked]);
+    if (isDone) {
+      setTimeout(() => {
+        setLoaded(true);
+      }, 2000);
+    }
+  }, [isDone])
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle isDarkModeOn />
+      <LoadingSection isLoaded={isLoaded} isError={isError} />
       <Header
         isMenuButtonClicked={isMenuButtonClicked}
         setMenuButtonStatus={setMenuButtonStatus}
       />
-      <SectionsWrapper>
-        <HamburgerMenu isMenuButtonClicked={isMenuButtonClicked} />
-        <LandingPageSection  />
-        <CalculatorSection  />
-      </SectionsWrapper>
+      {isDone ? (
+        <SectionsWrapper>
+          <HamburgerMenu isMenuButtonClicked={isMenuButtonClicked} />
+          <LandingPageSection />
+          <CalculatorSection currenciesObj={currenciesObj} />
+        </SectionsWrapper>
+      ) : null}
     </ThemeProvider>
   );
 }
