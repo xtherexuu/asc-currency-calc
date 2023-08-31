@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/asc-currency-calc/static/css/main.0533dc5b.css",
-    "main.js": "/asc-currency-calc/static/js/main.ab9c2d1a.js",
+    "main.js": "/asc-currency-calc/static/js/main.e0670fa4.js",
     "static/js/787.93875587.chunk.js": "/asc-currency-calc/static/js/787.93875587.chunk.js",
-    "static/media/image1.png": "/asc-currency-calc/static/media/image1.74cff8261237d5118dbf.png",
-    "static/media/icon512.png": "/asc-currency-calc/static/media/icon512.ee426643ff9de5f7a416.png",
-    "static/media/sun-logo.png": "/asc-currency-calc/static/media/sun-logo.14ff2dc898509f9b6c35.png",
-    "static/media/GrinchedRegular.woff": "/asc-currency-calc/static/media/GrinchedRegular.cc8a370ce2ef76242d8e.woff",
-    "static/media/moon-logo.png": "/asc-currency-calc/static/media/moon-logo.186e8d1e1992203bc53c.png",
+    "static/media/galaxybg2000.png": "/asc-currency-calc/static/media/galaxybg2000.4c74228da7e76589cfa8.png",
+    "static/media/planet1.png": "/asc-currency-calc/static/media/planet1.809a62f08c73d4ddf22f.png",
+    "static/media/planet2.png": "/asc-currency-calc/static/media/planet2.66020d719217b29c88e0.png",
+    "static/media/planet3.png": "/asc-currency-calc/static/media/planet3.95b181b9b6f3e92f17da.png",
+    "static/media/alonerocket1.png": "/asc-currency-calc/static/media/alonerocket1.5e8791cfa829d7b16c04.png",
+    "static/media/satelite.png": "/asc-currency-calc/static/media/satelite.ead4e775d121ab0619dd.png",
+    "static/media/astronautwithrocket1.png": "/asc-currency-calc/static/media/astronautwithrocket1.197906a2867e628ae896.png",
+    "static/media/astronautwithrocket2.png": "/asc-currency-calc/static/media/astronautwithrocket2.1fd0283344ca6da7e246.png",
+    "static/media/error-icon.png": "/asc-currency-calc/static/media/error-icon.98af006bd4cec5dd42f9.png",
+    "static/media/logo.png": "/asc-currency-calc/static/media/logo.5869e77ad86c9dbefec0.png",
+    "static/media/Eina01-Bold.woff": "/asc-currency-calc/static/media/Eina01-Bold.ab94a7922cad00ba1ccb.woff",
+    "static/media/Eina01.woff": "/asc-currency-calc/static/media/Eina01.7f6997398e1ba6c67905.woff",
     "index.html": "/asc-currency-calc/index.html",
-    "main.0533dc5b.css.map": "/asc-currency-calc/static/css/main.0533dc5b.css.map",
-    "main.ab9c2d1a.js.map": "/asc-currency-calc/static/js/main.ab9c2d1a.js.map",
+    "main.e0670fa4.js.map": "/asc-currency-calc/static/js/main.e0670fa4.js.map",
     "787.93875587.chunk.js.map": "/asc-currency-calc/static/js/787.93875587.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0533dc5b.css",
-    "static/js/main.ab9c2d1a.js"
+    "static/js/main.e0670fa4.js"
   ]
 }
