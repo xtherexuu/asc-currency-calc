@@ -10,8 +10,7 @@ export const Wrapper = styled.section`
   background-repeat: no-repeat;
   display: grid;
   padding: 30px 30px 50px 30px;
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
     min-height: calc(100vh - 50px);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
@@ -27,18 +26,17 @@ export const Wrapper = styled.section`
   @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
     min-height: calc(100vh - 70px);
   }
-  @media (width > ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
     min-height: calc(100vh - 90px);
   }
-  @media (width > ${({ theme }) => theme.breakpoints.ultrahd.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.ultrahd.breakpoint}) {
     min-height: calc(100vh - 110px);
   }
 `;
 
 export const TextContainer = styled.article`
   color: white;
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     text-align: center;

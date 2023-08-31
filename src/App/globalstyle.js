@@ -35,36 +35,28 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.smallmobile.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
         font-size: 1em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.mobile.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
           font-size: 1.1em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.tablet.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
           font-size: 1.2em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.mediumpc.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.mediumpc.breakpoint}) {
           font-size: 1.3em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.largepc.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
           font-size: 1.4em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.fullhd.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.fullhd.breakpoint}) {
           font-size: 1.6em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.quadhd.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.quadhd.breakpoint}) {
           font-size: 2.3em;
       }
-      @media (min-width: ${({ theme }) =>
-        theme.breakpoints.ultrahd.breakpoint}) {
+      @media (min-width: ${({ theme }) => theme.breakpoints.ultrahd.breakpoint}) {
           font-size: 3em;
       }
     }
@@ -76,10 +68,8 @@ export const GlobalStyle = createGlobalStyle`
 
     @keyframes rocketAnimation {
       0% {
-        /* transform: translate(0, 0); */
       }
       100% {
-        /* transform: translate(50vh, -140vw); */
         bottom: 85%;
         right: 120%;
       }

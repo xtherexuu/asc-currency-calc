@@ -4,8 +4,7 @@ export const Wrapper = styled.section`
   overflow: hidden;
   position: relative;
   min-width: 100%;
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
     min-height: calc(100vh - 50px);
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
@@ -42,8 +41,7 @@ export const CalculatorWrapper = styled.div`
   min-height: 100%;
   min-width: 100%;
   justify-content: center;
-  @media (orientation: landscape) and (min-width: ${({ theme }) =>
-      theme.breakpoints.smallpc.breakpoint}) {
+  @media (orientation: landscape) and (min-width: ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
     align-items: center;
   }
 `;
@@ -54,8 +52,7 @@ export const CalculatorContainer = styled.div`
   grid-template-rows: auto auto 1fr;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
-  @media (orientation: landscape) and (min-width: ${({ theme }) =>
-      theme.breakpoints.smallpc.breakpoint}) {
+  @media (orientation: landscape) and (min-width: ${({ theme }) => theme.breakpoints.smallpc.breakpoint}) {
     grid-template-areas: "title title" "result form";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
@@ -79,8 +76,7 @@ export const SpaceIcon = styled.img`
   position: absolute;
   z-index: -2;
   user-select: none;
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoints.smallmobile.breakpoint}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.smallmobile.breakpoint}) {
     width: 15%;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
@@ -129,7 +125,6 @@ export const SpaceIcon = styled.img`
     css`
       bottom: 5%;
       left: 55%;
-      /* transform: translateX(-50%); */
       @media (width <= ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
         display: none;
       }
