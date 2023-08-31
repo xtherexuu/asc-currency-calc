@@ -19,10 +19,26 @@ import planet2srcimg from "../../Utils/spaceicons/planet2.png";
 import planet3srcimg from "../../Utils/spaceicons/planet3.png";
 import { useState } from "react";
 
-const CalculatorSection = () => {
+const CalculatorSection = ({ currenciesObj }) => {
   const [inputValue, setInputValue] = useState("");
   const [fromSelectValue, setFromSelectValue] = useState("PLN");
   const [toSelectValue, setToSelectValue] = useState("EUR");
+  const [combinedResult, setCombinedResult] = useState(null);
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    const combinedResult = {
+      amount: inputValue,
+      result: (
+        (inputValue *
+          currenciesObj.rates[toSelectValue] /
+        currenciesObj.rates[fromSelectValue]
+      ).toFixed(2)),
+      fromCurrencyShortName: fromSelectValue,
+      toCurrencyShortName: toSelectValue,
+    };
+    setCombinedResult((result) => (result = combinedResult));
+  };
 
   return (
     <Wrapper id="calculatorSection">
@@ -32,14 +48,16 @@ const CalculatorSection = () => {
             <SectionHeading>Converter</SectionHeading>
           </TextSection>
           <Form
+            currenciesObj={currenciesObj}
             inputValue={inputValue}
             setInputValue={setInputValue}
             fromSelectValue={fromSelectValue}
             setFromSelectValue={setFromSelectValue}
             toSelectValue={toSelectValue}
             setToSelectValue={setToSelectValue}
+            onFormSubmit={onFormSubmit}
           />
-          <Result />
+          <Result combinedResult={combinedResult} />
         </CalculatorContainer>
       </CalculatorWrapper>
 
