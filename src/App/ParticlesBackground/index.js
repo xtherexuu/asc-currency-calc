@@ -16,7 +16,7 @@ const ParticlesBackground = () => {
   return (
     <Wrapper>
       <Particles
-        style={{zIndex: -3, position: "absolute"}}
+        style={{ zIndex: -3, position: "absolute" }}
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}

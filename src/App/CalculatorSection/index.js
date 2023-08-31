@@ -29,10 +29,9 @@ const CalculatorSection = ({ currenciesObj }) => {
     const combinedResult = {
       amount: inputValue,
       result: (
-        (inputValue *
-          currenciesObj.rates[toSelectValue] /
+        (inputValue * currenciesObj.rates[toSelectValue]) /
         currenciesObj.rates[fromSelectValue]
-      ).toFixed(2)),
+      ).toFixed(2),
       fromCurrencyShortName: fromSelectValue,
       toCurrencyShortName: toSelectValue,
     };

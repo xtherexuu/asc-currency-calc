@@ -12,7 +12,7 @@ import satelite from "../../Utils/spaceicons/satelite.png";
 import loadingIcon from "../../Utils/loading-icon.png";
 import errorIcon from "../../Utils/error-icon.png";
 
-const LoadingSection = ({isLoaded, isError}) => {
+const LoadingSection = ({ isLoaded, isError }) => {
   return (
     <Wrapper isLoaded={isLoaded}>
       <LoaderElement>

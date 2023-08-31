@@ -13,7 +13,6 @@ import useCurrentDate from "../useCurrentDate";
 
 const LandingPageSection = ({ currenciesObj }) => {
   const date = useCurrentDate();
-  // console.log(currenciesObj)
   const ratesData = currenciesObj.date;
   const getBetterRatesData = () => {
     const ratesDataArray = ratesData.split("-").reverse();

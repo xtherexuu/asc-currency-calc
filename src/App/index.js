@@ -22,12 +22,12 @@ function App() {
         setLoaded(true);
       }, 1500);
     }
-  }, [isDone])
+  }, [isDone]);
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle isDarkModeOn />
-      <LoadingSection  isLoaded={isLoaded} isError={isError} />
+      <LoadingSection isLoaded={isLoaded} isError={isError} />
       <Header
         isMenuButtonClicked={isMenuButtonClicked}
         setMenuButtonStatus={setMenuButtonStatus}
