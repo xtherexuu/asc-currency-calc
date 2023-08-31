@@ -43,7 +43,7 @@ const LandingPageSection = ({ currenciesObj }) => {
           Twoim niezawodnym przewodnikiem po kosmicznych wymianach walutowych!
         </Text>
         <Text>
-          Przeliczaj waluty w kosmicznym tępie na podstawie kursów&nbsp;z{" "}
+          Przeliczaj waluty w kosmicznym tempie na podstawie kursów&nbsp;z{" "}
           {getBetterRatesData()}r.
         </Text>
         <Text>

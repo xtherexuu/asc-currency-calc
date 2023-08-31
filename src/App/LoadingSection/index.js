@@ -37,7 +37,7 @@ const LoadingSection = ({ isLoaded, isError }) => {
       {isError ? (
         <Information errorMessage>
           Ups... Coś poszło nie tak przy próbie pobrania walut z satelity.
-          Odświerz stronę, lub spróbuj ponownie później.
+          Odśwież stronę lub spróbuj ponownie później.
         </Information>
       ) : null}
     </Wrapper>
