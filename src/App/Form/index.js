@@ -39,7 +39,7 @@ const Form = ({
           }}
         >
           {currencies.map((element) => {
-            return <option>{element}</option>;
+            return <option key={element}>{element}</option>;
           })}
         </Select>
       </Label>
@@ -53,7 +53,7 @@ const Form = ({
           }}
         >
           {currencies.map((element) => {
-            return <option>{element}</option>;
+            return <option key={element}>{element}</option>;
           })}
         </Select>
       </Label>
