@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
   display: grid;
-  z-index: 100;
+  z-index: 2;
   align-items: center;
   font-size: 1.25rem;
   background-color: ${({ theme }) => theme.colors.mainBackgroundColor};
