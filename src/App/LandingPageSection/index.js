@@ -7,15 +7,19 @@ import {
   ScrollButton,
   ScrollIcon,
 } from "./styled";
-
 import srcToLogoImage from "../../Utils/logo.png";
-
 import srcToScrollIcon from "../../Utils/arrow-down-icon.png";
-
 import useCurrentDate from "../useCurrentDate";
 
-const LandingPageSection = () => {
+const LandingPageSection = ({ currenciesObj }) => {
   const date = useCurrentDate();
+  // console.log(currenciesObj)
+  const ratesData = currenciesObj.date;
+  const getBetterRatesData = () => {
+    const ratesDataArray = ratesData.split("-").reverse();
+    const betterRatesData = ratesDataArray.join(".");
+    return betterRatesData;
+  };
   const getFormatedDate = () => {
     const formatedDate = date.toLocaleDateString("pl-PL", {
       day: "2-digit",
@@ -23,14 +27,14 @@ const LandingPageSection = () => {
       year: "numeric",
     });
     return formatedDate;
-  }
+  };
   const getFormatedTime = () => {
     const formatedTime = date.toLocaleTimeString("pl-PL", {
       hour: "numeric",
       minute: "numeric",
-    })
+    });
     return formatedTime;
-  }
+  };
   return (
     <Wrapper id="landingpageSection">
       <ImageLogo src={srcToLogoImage} alt="that's a website logo" />
@@ -40,9 +44,12 @@ const LandingPageSection = () => {
           Twoim niezawodnym przewodnikiem po kosmicznych wymianach walutowych!
         </Text>
         <Text>
-          Przeliczaj waluty w kosmicznym tępie na podstawie kursów&nbsp;z 09.08.2023r
+          Przeliczaj waluty w kosmicznym tępie na podstawie kursów&nbsp;z{" "}
+          {getBetterRatesData()}r.
         </Text>
-        <Text>Dziś jest {getFormatedDate()}r.&nbsp;{getFormatedTime()}</Text>
+        <Text>
+          Dziś jest {getFormatedDate()}r.&nbsp;{getFormatedTime()}
+        </Text>
       </TextContainer>
       <ScrollButton href="#calculatorSection">
         <ScrollIcon

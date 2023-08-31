@@ -27,7 +27,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle isDarkModeOn />
-      <LoadingSection isLoaded={isLoaded} isError={isError} />
+      <LoadingSection  isLoaded={isLoaded} isError={isError} />
       <Header
         isMenuButtonClicked={isMenuButtonClicked}
         setMenuButtonStatus={setMenuButtonStatus}
@@ -35,7 +35,7 @@ function App() {
       {isDone ? (
         <SectionsWrapper>
           <HamburgerMenu isMenuButtonClicked={isMenuButtonClicked} />
-          <LandingPageSection />
+          <LandingPageSection currenciesObj={currenciesObj} />
           <CalculatorSection currenciesObj={currenciesObj} />
         </SectionsWrapper>
       ) : null}
