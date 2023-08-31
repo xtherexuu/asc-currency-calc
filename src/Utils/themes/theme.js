@@ -1,9 +1,6 @@
 const theme = {
     colors: {
         mainBackgroundColor: "#370c88",
-        // #310c88 dark blue quite purp
-        // #4511be dark light blue quite purp
-        // #370c88 dark blue more quite purp
         mainFontColor: "#fff",
     },
     breakpoints: {
