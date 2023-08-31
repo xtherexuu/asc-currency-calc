@@ -8,20 +8,33 @@ import {
   NumberResult,
 } from "./styled";
 
-const Result = () => {
+const Result = ({ combinedResult }) => {
   return (
     <Wrapper>
-      <TextResult>
-        Po przeliczeniu <AmountSpan text>100000000.00</AmountSpan>
-        <CurrencySpan text>EUR</CurrencySpan> na USD otrzymasz{" "}
-        <ResultSpan text>10255725000.00</ResultSpan>
-        <BoldCurrencySpan text>USD</BoldCurrencySpan>
-      </TextResult>
-      <NumberResult>
-        <AmountSpan>100000000.00</AmountSpan>
-        <CurrencySpan>EUR</CurrencySpan>&nbsp;= <ResultSpan>10255725000.00</ResultSpan>
-        <BoldCurrencySpan>USD</BoldCurrencySpan>
-      </NumberResult>
+      {combinedResult ? (
+        <>
+          <TextResult>
+            Po przeliczeniu{" "}
+            <AmountSpan text>{combinedResult.amount}</AmountSpan>
+            <CurrencySpan text>
+              {combinedResult.fromCurrencyShortName}
+            </CurrencySpan>{" "}
+            na {combinedResult.toCurrencyShortName} otrzymasz{" "}
+            <ResultSpan text>{combinedResult.result}</ResultSpan>
+            <BoldCurrencySpan text>
+              {combinedResult.toCurrencyShortName}
+            </BoldCurrencySpan>
+          </TextResult>
+          <NumberResult>
+            <AmountSpan>{combinedResult.amount}</AmountSpan>
+            <CurrencySpan>{combinedResult.fromCurrencyShortName}</CurrencySpan>
+            &nbsp;= <ResultSpan>{combinedResult.result}</ResultSpan>
+            <BoldCurrencySpan>
+              {combinedResult.toCurrencyShortName}
+            </BoldCurrencySpan>
+          </NumberResult>
+        </>
+      ) : null}
     </Wrapper>
   );
 };
