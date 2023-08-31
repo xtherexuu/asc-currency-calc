@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.nav`
   position: fixed;
-  z-index: 90000000;
+  z-index: 3;
   width: 100px;
   height: 100px;
   top: 50px;
