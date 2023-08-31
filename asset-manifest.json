@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/asc-currency-calc/static/js/main.e0670fa4.js",
+    "main.js": "/asc-currency-calc/static/js/main.09c366d5.js",
     "static/js/787.93875587.chunk.js": "/asc-currency-calc/static/js/787.93875587.chunk.js",
     "static/media/galaxybg2000.png": "/asc-currency-calc/static/media/galaxybg2000.4c74228da7e76589cfa8.png",
     "static/media/planet1.png": "/asc-currency-calc/static/media/planet1.809a62f08c73d4ddf22f.png",
@@ -15,10 +15,10 @@
     "static/media/Eina01-Bold.woff": "/asc-currency-calc/static/media/Eina01-Bold.ab94a7922cad00ba1ccb.woff",
     "static/media/Eina01.woff": "/asc-currency-calc/static/media/Eina01.7f6997398e1ba6c67905.woff",
     "index.html": "/asc-currency-calc/index.html",
-    "main.e0670fa4.js.map": "/asc-currency-calc/static/js/main.e0670fa4.js.map",
+    "main.09c366d5.js.map": "/asc-currency-calc/static/js/main.09c366d5.js.map",
     "787.93875587.chunk.js.map": "/asc-currency-calc/static/js/787.93875587.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e0670fa4.js"
+    "static/js/main.09c366d5.js"
   ]
 }
