@@ -4,6 +4,9 @@ export const Wrapper = styled.div`
   grid-area: result;
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const TextResult = styled.p`
@@ -16,11 +19,19 @@ export const TextResult = styled.p`
 `;
 
 export const NumberResult = styled.p`
+  display: inline-block;
   text-align: center;
   font-size: 2rem;
   color: white;
+  border-bottom: 2px solid #9d26c8;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile.breakpoint}) {
     font-size: 1.5rem;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet.breakpoint}) {
+    border-bottom: 3px solid #9d26c8;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.largepc.breakpoint}) {
+    border-bottom: 4px solid #9d26c8;
   }
 `;
 
