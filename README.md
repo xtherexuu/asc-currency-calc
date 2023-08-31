@@ -6,11 +6,11 @@
 
 ## Description
 
-This is my project of currency converter it's simple and it connect with API. This project was bootstrapped with Crate React App.
+This is my project of a currency converter. It's simple and it connects with an API. This project was bootstrapped with Create React App.
 
-I'm using this API https://exchangerate.host/ and here you can read more about it.
+I'm using this API: https://exchangerate.host/ and here you can read more about it.
 
-In this project I'm also using tsparticles library https://github.com/tsparticles/react and there you can read more about it.
+In this project, I'm also using the tsparticles library: https://github.com/tsparticles/react, and there you can read more about it.
 
 ## Preview
 
