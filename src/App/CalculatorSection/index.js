@@ -10,7 +10,6 @@ import Form from "../Form";
 import Result from "../Result";
 import ParticlesBackground from "../ParticlesBackground";
 import alonerocket1imgsrc from "../../Utils/spaceicons/alonerocket1.png";
-import alonerocket2imgsrc from "../../Utils/spaceicons/alonerocket2.png";
 import astronautwithrocket1srcimg from "../../Utils/spaceicons/astronautwithrocket1.png";
 import astronautwithrocket2srcimg from "../../Utils/spaceicons/astronautwithrocket2.png";
 import sateliteimgsrc from "../../Utils/spaceicons/satelite.png";
