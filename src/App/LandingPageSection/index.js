@@ -13,11 +13,13 @@ import useCurrentDate from "../useCurrentDate";
 
 const LandingPageSection = ({ currenciesObj }) => {
   const date = useCurrentDate();
-  const ratesData = currenciesObj.date;
-  const getBetterRatesData = () => {
-    const ratesDataArray = ratesData.split("-").reverse();
-    const betterRatesData = ratesDataArray.join(".");
-    return betterRatesData;
+  const ratesData = new Date(currenciesObj.timestamp * 1000);
+  const getFormatedRatesData = () => {
+    return ratesData.toLocaleDateString("pl", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
   };
   const getFormatedDate = () => {
     const formatedDate = date.toLocaleDateString("pl-PL", {
@@ -44,7 +46,7 @@ const LandingPageSection = ({ currenciesObj }) => {
         </Text>
         <Text>
           Przeliczaj waluty w kosmicznym tempie na podstawie kursów&nbsp;z{" "}
-          {getBetterRatesData()}r.
+          {getFormatedRatesData()}r.
         </Text>
         <Text>
           Dziś jest {getFormatedDate()}r.&nbsp;{getFormatedTime()}
