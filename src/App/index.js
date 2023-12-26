@@ -13,7 +13,6 @@ import LoadingSection from "./LoadingSection";
 function App() {
   const [isMenuButtonClicked, setMenuButtonStatus] = useState(false);
   const [isLoaded, setLoaded] = useState(false);
-
   const [currenciesObj, isError, isDone] = useCurrencies();
 
   useEffect(() => {

@@ -9,26 +9,16 @@ const useCurrencies = () => {
     const getCurrencies = async () => {
       try {
         const response = await fetch(
-          "http://api.exchangerate.host/live?access_key=4cc019c39487af21fdeb10cd1b5733d4&currencies=PLN,USD,EUR,GBP,CZK,NOK,JPY&source=PLN"
+          "https://api.currencyapi.com/v3/latest" +
+          "?apikey=cur_live_M92FPLFgUOoPeOyLwp1iP6wKwnLRanOn6Il1HA3g" +
+          "&base_currency=PLN" +
+          "&currencies=PLN,USD,EUR,GBP,CZK,NOK,JPY"
         );
         if (!response.ok) {
           throw new Error(response.status);
         }
         const currenciess = await response.json();
-        if (!currenciess.success) {
-          throw {
-            message: "There was an error",
-            errorCode: currenciess.error.code,
-            errorText: currenciess.error.info,
-          };
-        }
-        setCurrenicesObj(
-          (obj) =>
-            (obj = {
-              ...currenciess,
-              quotes: { ...currenciess.quotes, PLNPLN: 1 },
-            })
-        );
+        setCurrenicesObj(currenciess);
         setDoneStatus(true);
       } catch (error) {
         console.error(error);

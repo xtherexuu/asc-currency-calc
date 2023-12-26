@@ -10,7 +10,7 @@ const Form = ({
   onFormSubmit,
   currenciesObj,
 }) => {
-  const currenciesOnly = currenciesObj.quotes;
+  const currenciesOnly = currenciesObj.data;
   const currencies = Object.keys(currenciesOnly);
 
   return (
@@ -39,7 +39,7 @@ const Form = ({
           }}
         >
           {currencies.map((element) => {
-            return <option key={element.slice(3)}>{element.slice(3)}</option>;
+            return <option key={element}>{element}</option>;
           })}
         </Select>
       </Label>
@@ -53,7 +53,7 @@ const Form = ({
           }}
         >
           {currencies.map((element) => {
-            return <option key={element.slice(3)}>{element.slice(3)}</option>;
+            return <option key={element}>{element}</option>;
           })}
         </Select>
       </Label>

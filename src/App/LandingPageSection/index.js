@@ -13,7 +13,7 @@ import useCurrentDate from "../useCurrentDate";
 
 const LandingPageSection = ({ currenciesObj }) => {
   const date = useCurrentDate();
-  const ratesData = new Date(currenciesObj.timestamp * 1000);
+  const ratesData = new Date(currenciesObj.meta.last_updated_at);
   const getFormatedRatesData = () => {
     return ratesData.toLocaleDateString("pl", {
       day: "2-digit",
